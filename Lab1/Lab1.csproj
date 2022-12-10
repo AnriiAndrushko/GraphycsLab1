@@ -11,4 +11,13 @@
     <PackageReference Include="OpenTK" Version="4.7.5" />
   </ItemGroup>
 
+ <Target Name="MyTask" AfterTargets="Build">
+
+   	 <CreateItem Include="$(ProjectDir)\Shaders\*.*">
+            <Output TaskParameter="Include" ItemName="YourFilesToCopy" />
+        </CreateItem>
+
+     <Copy SourceFiles="@(YourFilesToCopy)" DestinationFolder="$(OutputPath)/Shaders/%(RecursiveDir)" ContinueOnError="true" />
+</Target>
+
 </Project>

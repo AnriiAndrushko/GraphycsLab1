@@ -7,8 +7,8 @@ namespace Lab1
 {
     public class Lab1 : GameWindow
     {
-        private string _pathToVertexShader = "Shaders/shader.vert";
-        private string _pathToFragmentShader = "Shaders/shader.frag";
+        private string _pathToVertexShader;
+        private string _pathToFragmentShader;
 
         private int _vertexBufferObject;
         private int _vertexArrayObject;
